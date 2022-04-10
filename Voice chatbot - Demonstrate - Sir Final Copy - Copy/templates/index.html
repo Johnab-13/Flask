@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static',filename='js/main.js') }}"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+    .radio{
+            display:inline-flex;
+            overflow:hidden;
+            border-radius:5px;
+            box-shadow:0 0 75px rgba(0, 0, 0, 0.25);
+          }
+    .radio__input{
+            display:none;
+         }
+
+    .radio__label{
+            padding: 10px 17px;
+            font-size:14px;
+            font-family: sans-serif;
+            color:#ffffff;
+            background:#009578;
+            cursor:pointer;
+            transition: background 0.1s;
+         }
+
+    .radio__label:not(:last-of-type){
+            border-right: 1px solid #006B56;
+         }
+
+    .radio__input:checked + .radio__label{
+            background: #006B56;
+         }
+    </style>
+</head>
+
+<body>
+    <header>Chatbot</header>
+    <section class="main">
+            <div class="user-area">
+                <img src="{{ url_for('static',filename='images/user.png') }}">
+            </div>
+            <div class="chatarea-main">
+
+                <div class="chatarea-outer">
+
+                </div>
+                <div class="chatarea-outer1">
+
+                </div>
+            </div>
+
+            <div class="chatbot-area">
+                <img src="{{ url_for('static',filename='images/chatbot.png') }}">
+            </div>
+
+<form name="first" action="/chatbot" method="post">
+
+            <input type="text" name="company" id="company">
+            <input type="text" name="port" id="port">
+            <input type="text" name="month" id="month">
+            <input type="text" name="year" id="year">
+            <input type="text" name="question" id="question">
+            <input type="text" name="invalid" id="invalid">
+            <input type="text" name="cont" id="cont">
+
+</form>
+
+                <div id="response"></div>
+                <div style="background-color:powderblue;"><h1 id="output" class="output"></h1></div>
+
+
+            <button id="mic"><i class="flaticon-microphone"></i></button>
+
+    </section>
+
+</body>
+</html>

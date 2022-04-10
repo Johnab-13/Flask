@@ -1,0 +1,9 @@
+ <div id="divResult" class="button" style="display:none;"> <input type="radio" style="vertical-align: middle; margin: 0px;" name="Company" id="BPCL" value="BPCL"/>BPCL
+                    <br>
+                    <input type="radio" style="vertical-align: middle; margin: 0px;" name="Company" id="RIL" value="RIL"/>RIL
+                    <br>
+                    <input type="radio" style="vertical-align: middle; margin: 0px;" name="Company" id="Nayara" value="Nayara"/>Nayara
+                    <br>
+                    <input type="radio" style="vertical-align: middle; margin: 0px;" name="Company" id="IOCL" value="IOCL"/>IOCL
+                    <br>
+            </div>
